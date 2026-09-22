@@ -1,0 +1,28 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F9FAFB;
+  color: #1F2937;
+}
+
+/* Container class */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+}

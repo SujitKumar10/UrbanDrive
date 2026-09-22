@@ -1,0 +1,11 @@
+# IDE
+.vscode/
+backend/.metadata/
+
+# OS
+*.lnk
+.DS_Store
+Thumbs.db
+
+# Secrets — copy application.properties.example and fill in locally
+backend/carrental/src/main/resources/application.properties

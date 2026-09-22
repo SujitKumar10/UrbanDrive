@@ -1,0 +1,217 @@
+.contact-page {
+  min-height: 100vh;
+  padding: 90px 8%;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e0f2fe, #eef2ff, #fdf4ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative floating gradient blobs */
+.contact-page::before,
+.contact-page::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.contact-page::before {
+  background: #60a5fa;
+  top: -100px;
+  left: -100px;
+}
+
+.contact-page::after {
+  background: #a78bfa;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* HERO */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s ease;
+}
+
+.contact-hero h1 {
+  font-size: 44px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-hero p {
+  color: #475569;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+/* LAYOUT */
+.contact-container {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* GLASS CARD STYLE */
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.contact-info:hover,
+.contact-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(124, 58, 237, 0.15);
+}
+
+/* INFO SECTION */
+.contact-info h2 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.info-box {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f1f5f9, #ffffff);
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  transform: translateX(5px);
+  background: linear-gradient(135deg, #e0e7ff, #f5f3ff);
+}
+
+.info-box h4 {
+  margin-bottom: 5px;
+  color: #7c3aed;
+}
+
+.info-box p {
+  color: #475569;
+}
+
+/* FORM */
+.contact-form h2 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #dbeafe;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+  background: #f8fafc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+  background: white;
+}
+
+/* BUTTON */
+.contact-form button {
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(236, 72, 153, 0.3);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+} 
+
+/* SUCCESS OVERLAY */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.4s ease;
+}
+
+.success-box {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 24px;
+  text-align: center;
+  animation: popUp 0.5s ease;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.checkmark {
+  font-size: 50px;
+  color: #22c55e;
+  margin-bottom: 15px;
+  animation: bounce 0.6s ease;
+}
+
+.success-box h3 {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popUp {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.5); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
